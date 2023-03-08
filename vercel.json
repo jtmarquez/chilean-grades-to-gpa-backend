@@ -1,10 +1,10 @@
 {
     "builds": [{
-        "src": "uc_grades_to_gpa/uc_grades_to_gpa/wsgi.py",
+        "src": "uc_grades_to_gpa/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9"  }
     }],
     "routes" : [{
-        "src" : "/(.*)", "dest":"uc_grades_to_gpa/uc_grades_to_gpa/wsgi.py"
+        "src" : "/(.*)", "dest":"uc_grades_to_gpa/wsgi.py"
     }]
 }
