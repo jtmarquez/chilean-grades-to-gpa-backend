@@ -16,6 +16,7 @@ class UcGradesToGpaView(APIView):
             return Response(json.dumps({
                 "gpas": gpas,
                 "avg_gpa": avg_gpa,
+                "notes": grades,
             }))
         except Exception:
             return Response(400)
