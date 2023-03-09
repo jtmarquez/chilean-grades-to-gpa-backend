@@ -7,7 +7,7 @@ from .utils import calculateGpaFromGrades, parsePDFFileToNotes, calculateAvgGpaF
 
 # Create your views here.
 class UcGradesToGpaView(APIView):
-    def put(self, request):
+    def post(self, request):
         try:
             file_obj = request.data['file']
             grades = parsePDFFileToNotes(file_obj)
