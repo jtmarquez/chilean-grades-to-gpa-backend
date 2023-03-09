@@ -14,6 +14,7 @@ class UcGradesToGpaView(APIView):
             gpas = calculateGpaFromGrades(grades)
             avg_gpa = calculateAvgGpaFromGpas(gpas)
             return Response(json.dumps({
+                "notes": grades,
                 "gpas": gpas,
                 "avg_gpa": avg_gpa,
             }))
