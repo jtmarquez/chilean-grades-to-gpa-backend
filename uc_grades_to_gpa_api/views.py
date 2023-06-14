@@ -24,4 +24,6 @@ class UcGradesToGpaView(APIView):
 class TestView(APIView):
     def get(self, request):
         print(request)
+        print(request.headers)
+        print(request.body)
         return Response(200)
