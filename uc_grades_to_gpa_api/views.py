@@ -20,3 +20,8 @@ class UcGradesToGpaView(APIView):
             }))
         except Exception:
             return Response(400)
+
+class TestView(APIView):
+    def get(self, request):
+        print(request)
+        return Response(200)
