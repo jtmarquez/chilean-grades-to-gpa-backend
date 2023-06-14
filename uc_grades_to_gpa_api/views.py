@@ -27,3 +27,8 @@ class TestView(APIView):
         print(request.headers)
         print(request.body)
         return Response(200)
+    def post(self, request):
+        print(request)
+        print(request.headers)
+        print(request.body)
+        return Response(201)
